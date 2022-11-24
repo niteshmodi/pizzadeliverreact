@@ -1,6 +1,7 @@
 .cardoutside{
     background-color: aliceblue;
     border-radius: 20px;
+    padding: 20px 16px;
 }
 
 .cardbody{
@@ -16,5 +17,5 @@
 .cd2 {
     border-radius: 16px;
    
-    height: 6rem;
+    height: 10rem;
 }

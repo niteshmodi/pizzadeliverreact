@@ -14,15 +14,21 @@ const Cartcard = () => {
 <div className="cardoutside">
      <div className="cardbody">
            <div className="productdetails">
-           <Card.Img className="cd2" variant="top" src={bground}  />
+           <Card.Img className="cd2" variant="top" src={bground}  style={{
+            borderRadius: '20px'
+           }}/>
                
             <div>
-             <p>Product Name</p>
-              <p>Price</p>  
+             <p className='pizzaname'>Marghinta</p>
+              <p className='pizzaprice'>100rs</p>  
             </div>   
            </div>
-          
+
+          <div className='selectquantity'>
+          <h5>Select Quantity</h5>
           <p><input type="number" value="1"/> </p>
+          </div>
+          
           <div className='addons'>
              <div className="sizeinfo">
                <h3>Size</h3>
