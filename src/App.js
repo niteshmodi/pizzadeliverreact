@@ -1,15 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Menu , Naavbar } from "./components";
-
+import Home from './Pages/Home';
+import Cart from './Pages/Cart';
+import {Routes , Route ,BrowserRouter} from 'react-router-dom';
+import {Naavbar} from "./components"
 
 
 function App() {
   return (
     <div>
-     <Naavbar/>
-     <Menu/>
-     
+    <Naavbar/>
+      <Routes> 
+          <Route path="/" element={<Home/>} />
+          <Route path="cart" element={<Cart/>} />
+     </Routes>
+
     </div>
+   
+ 
    
   );
 }

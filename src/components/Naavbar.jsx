@@ -4,6 +4,7 @@ import "./Navbar.css";
 import { Button } from 'react-bootstrap';
 import bground from "../assets/images/bg.png"
 import logo from "../assets/images/pizza-shop.png"
+import{ Link} from "react-router-dom"
 const Naavbar = () => {
   return (
     <>
@@ -15,19 +16,17 @@ const Naavbar = () => {
 
            <div className='sidebar'>
            <div className='bn'>
-           <div className='btnn'>
-            <span>Home</span>
-            </div>
+           <Link to="/" className='btnn' >
+            Home
+            </Link>
            </div>
            <div className='bn'>
-           <div className='btnn'>
-            <span>Menu</span>
-            </div>
-           </div>
-           <div className='bn'>
-           <div className='btnn'>
-            <span>About</span>
-            </div>
+           
+            {/* <span>Menu</span> */}
+            <Link to="/cart" className='btnn' >
+             Cart
+            </Link>
+            
            </div>
             
             
