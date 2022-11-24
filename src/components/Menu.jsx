@@ -13,7 +13,7 @@
     const [data , setData] = useState([]);
     const arrayData = data;
     let filterData = data;
-    
+    console.log(data);
     const [selected, setSelected] = useState("");
 
     const [added,setAdded] = useState(0);
@@ -67,19 +67,19 @@
     }
     else if (selected==="PLTH")
     {
-        const filterr =filterData.sort((a,b) => a.price-b.price);
+        const filterr =filterData.sort((a,b) => Number(a.price)-Number(b.price));
     setData(filterr);
     }
     else if (selected==="PHTL"){
-      const filterr =filterData.sort((a,b) => b.price-a.price);
+      const filterr =filterData.sort((a,b) => Number(b.price)-Number(a.price));
       setData(filterr)
     }
     else if (selected==="RLTH"){
-      const filterr =filterData.sort((a,b) => a.rating-b.rating);
+      const filterr =filterData.sort((a,b) => parseFloat(a.rating)-parseFloat(b.rating));
       setData(filterr);
     }
     else if (selected==="RHTL"){
-      const filterr =filterData.sort((a,b) => b.rating-a.rating);
+      const filterr =filterData.sort((a,b) => parseFloat(b.rating)-parseFloat(a.rating));
       setData(filterr)
     }
   }

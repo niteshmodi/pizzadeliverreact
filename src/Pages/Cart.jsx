@@ -1,5 +1,6 @@
 import { Stack } from "react-bootstrap";
   import Button from 'react-bootstrap/Button';
+import Cartcard from "../components/Cartcard";
 
 function Cart() {
     return (
@@ -7,6 +8,7 @@ function Cart() {
        <section className=" filtermenu iteam_section mt-4 d-flex container" >
          <Stack>
             <h1>Welcome To Cart</h1>
+            <Cartcard/>
          </Stack>
        </section>
       </>

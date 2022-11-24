@@ -1,0 +1,20 @@
+.cardoutside{
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.cardbody{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productdetails{
+    display: flex  ;
+    align-items: center;
+    justify-content: center ;
+}
+.cd2 {
+    border-radius: 16px;
+   
+    height: 6rem;
+}
