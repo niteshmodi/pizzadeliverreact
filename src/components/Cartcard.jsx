@@ -15,11 +15,12 @@ const Cartcard = () => {
      <div className="cardbody">
            <div className="productdetails">
            <Card.Img className="cd2" variant="top" src={bground}  style={{
-            borderRadius: '20px'
+            borderRadius: '20px',
+            marginRight: '5vh'
            }}/>
                
-            <div>
-             <p className='pizzaname'>Marghinta</p>
+            <div className='productinfo'>
+              <p className='pizzaname'>Marghinta</p>
               <p className='pizzaprice'>100rs</p>  
             </div>   
            </div>
@@ -29,13 +30,19 @@ const Cartcard = () => {
           <p><input type="number" value="1"/> </p>
           </div>
           
-          <div className='addons'>
+          <div className='sizeaddons'>
              <div className="sizeinfo">
                <h3>Size</h3>
                <p>Large</p>
               </div> 
+             
+          </div>
+          <div className='toppingaddons'>
              <div className="toppinginfo">
                <h3>Topping's</h3>
+              <p>Red Pepper</p>
+              <p>Red Pepper</p>
+              <p>Red Pepper</p>
               <p>Red Pepper</p>
               <p>Onion</p>
               </div> 
