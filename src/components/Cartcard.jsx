@@ -8,19 +8,20 @@ const Cartcard = () => {
     <Card className="carddiv" style={{ width: '100%' ,
      padding: "5px",
      border: "none",
-     height: "10%"
+     
      }}
      >
 <div className="cardoutside">
      <div className="cardbody">
            <div className="productdetails">
            <Card.Img className="cd2" variant="top" src={bground}  style={{
-            borderRadius: '20px',
-            marginRight: '5vh'
+          
+            marginRight: '5px',
+           
            }}/>
                
             <div className='productinfo'>
-              <p className='pizzaname'>Marghinta</p>
+              <p className='pizzaname'>Double Cheese Margherit</p>
               <p className='pizzaprice'>100rs</p>  
             </div>   
            </div>
@@ -30,7 +31,10 @@ const Cartcard = () => {
           <p><input type="number" value="1"/> </p>
           </div>
           
-          <div className='sizeaddons'>
+         
+    </div>
+    <div className="cardaddons">
+         <div className='sizeaddons'>
              <div className="sizeinfo">
                <h3>Size</h3>
                <p>Large</p>

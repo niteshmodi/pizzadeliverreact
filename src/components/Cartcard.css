@@ -1,28 +1,97 @@
 .cardoutside{
-    background-color: #F3EFE0;
+    background-color: #F3EFE9;
     border-radius: 20px;
     padding: 20px 16px;
+    border-bottom: 1px solid;
+  
 }
 
 .cardbody{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+   justify-content: space-between;
+   
 }
 .productdetails{
-    display: flex  ;
-    align-items: center;
+   
+   
     justify-content: center ;
 
 }
 .cd2 {
-    border-radius: 16px;
-    height: 10rem;
+    
+    height: 8vh;
+    margin-bottom: 5px;
 }
 
 .cardbody p{
-    border: 1px solid;
+    
     border-radius: 16px;
     padding: 5px 5px;
-    text-align: center;
+   line-height: 0.1;
+    font-size: 15px;
+    font-size: large;
+    font-weight: bold;
+}
+.cardaddons{
+    border: 1px solid;
+    padding: 0px 10px
+   
+}
+.sizeinfo{
+    display: flex;
+    align-items: center;
+    
+}
+
+.toppinginfo{
+    display: flex;
+    align-items: center;
+   
+}
+.cardaddons p {
+    padding-left: 10px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.cardaoutside {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 20px;
+  padding: 20px 16px;
+  border-bottom: 1px solid;
+}
+
+.cardoutside:not(:disabled):hover,
+.cardoutside:not(:disabled):focus {
+  outline: 0;
+  background: #F3EFE1;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.cardoutside:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
 }
