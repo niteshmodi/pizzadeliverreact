@@ -23,7 +23,7 @@ const Naavbar = () => {
            <div className='bn'>
            
             {/* <span>Menu</span> */}
-            <Link to="/cart" className='btnn' >
+            <Link to="cart" className='btnn' >
              Cart
             </Link>
             

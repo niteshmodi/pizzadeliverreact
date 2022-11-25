@@ -3,7 +3,38 @@ import "./foodPopup.css"
 import pizzaImage from "../assets/images/pizza-icon.png"
 import onionImage from "../assets/images/onion.png"
 import bground from "../assets/images/bg.png"
+import { useNavigate } from "react-router-dom"
+import {useState, useEffect} from 'react';
+
+
 const FoodPopup = (props) => {
+  const history = useNavigate();
+ 
+  var [userHash, setuserHash] = useState({'SIZE' : '', 'TOPPINGS' : [], 'PRICE':props.price, 'TITLE':props.title , 'IMAGE':props.img_url});
+  let userkey = `user_${props.key_id}`;
+  localStorage.setItem(userkey,JSON.stringify([]));
+  // let userHash = 
+
+  console.log("props::",props);
+
+  const button1click = (size,id) => {
+    console.log('size',size,id);
+    userHash['SIZE'] = size
+    console.log("userHash::",userHash);
+    setuserHash(userHash)
+  }
+  const toppingclick = (size,id) => {
+    console.log('size',size,id);
+    userHash['TOPPINGS'].push(size);
+    console.log("userHash::",userHash);
+    setuserHash(userHash)
+  }
+
+  const redirectToCart = () => {
+    console.log('userHash redirectToCart',userHash);
+    localStorage.setItem(userkey,JSON.stringify(userHash));
+    history(`/cart?pizza=${props.key_id}`);
+  }
 
   return (props.trigger) ? (
     <div className='popup'>
@@ -26,13 +57,13 @@ const FoodPopup = (props) => {
    
     <div className="sizes">
           <div className="size">
-            <button className='button-74'>{props.size1}</button>
+            <button onClick={() => button1click('R',props.key_id)} className='button-74'>{props.size1}</button>
           </div>
           <div className="size">
-            <button className='button-74'>{props.size2}</button>
+            <button  onClick={() => button1click('M',props.key_id)} className='button-74'>{props.size2}</button>
           </div>
           <div className="size">      
-            <button className='button-74'>{props.size3}</button>
+            <button  onClick={() => button1click('L',props.key_id)} className='button-74'>{props.size3}</button>
           </div>
     </div>
     </div>
@@ -48,25 +79,25 @@ const FoodPopup = (props) => {
     
     <div className="toppings">
           <div className="topping">
-            <button className='button-74'>{props.t1}</button>
+            <button className='button-74' onClick={()=>{toppingclick(props.t1,props.key_id)}}>{props.t1}</button>
           </div>
           <div className="topping">
-            <button className='button-74'>{props.t2}</button>
+            <button className='button-74'  onClick={()=>{toppingclick(props.t2,props.key_id)}}>{props.t2}</button>
           </div>
           <div className="topping">      
-            <button className='button-74'>{props.t3}</button>
+            <button className='button-74' onClick={()=>{toppingclick(props.t3,props.key_id)}}>{props.t3}</button>
           </div>
           <div className="topping">
-            <button className='button-74'>{props.t4}</button>
+            <button className='button-74' onClick={()=>{toppingclick(props.t4,props.key_id)}}>{props.t4}</button>
           </div>
           <div className="topping">      
-            <button className='button-74'>{props.t5}</button>
+            <button className='button-74' onClick={()=>{toppingclick(props.t5,props.key_id)}}>{props.t5}</button>
           </div>
     </div>
     </div>
     
     </div>
-    <button className="accept">Add to Cart</button>
+    <button className="accept" onClick={()=>{redirectToCart();  }} >Add to Cart</button>
     </div>
     
      

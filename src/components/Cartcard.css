@@ -1,4 +1,4 @@
-.cardoutside{
+/* .cardoutside{
     background-color: #F3EFE9;
     border-radius: 20px;
     padding: 20px 16px;
@@ -94,4 +94,137 @@
   filter: saturate(0.2) opacity(0.5);
   -webkit-filter: saturate(0.2) opacity(0.5);
   cursor: not-allowed;
+} */
+
+/* New card Style */
+/* New card Style */
+.cardoutside{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 20px;    
+    padding: 20px 16px;
+   margin-bottom: 10px;
+   border: 2px solid white;
+}
+.cardoutside:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: 2px solid;
+}
+.cardcontent{
+    display: flex;
+    
+}
+.cd2 {
+    
+    height: 10rem;
+    margin-bottom: 5px;
+    
+}
+
+.topcard{
+line-height: 10px;
+padding-bottom: 0.4rem;
+}
+.detailsdiv{
+    margin-left: 10px;
+}
+.fottoncard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fottoncard .price {
+    font-size: 30px;
+}
+
+.cardcontent h4{
+    white-space: nowrap;
+    width: 100%;
+}
+.toppingp{
+    color: #7f8c9b;
+   
+}
+.sizep{
+    font-weight: bold;
+}
+input{
+    width: 80%;
+border: none;
+background-color: #EEEEEE;
+border-radius: 20px;
+text-align: center;
+padding: 5px 5px;
+}
+.inputdiv{
+    width: 100%;
+ 
+}
+
+
+
+
+.buybtn {
+ 
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 40%;
+}
+
+.buybtn:after {
+ 
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.buybtn:main,
+.button-19:focus {
+ 
+  -webkit-user-select: auto;
+}
+
+.buybtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.buybtn:disabled {
+  cursor: auto;
+}
+
+.price {
+    margin-right: 20px;
+    white-space: nowrap; 
 }

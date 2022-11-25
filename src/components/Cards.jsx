@@ -44,10 +44,14 @@ function Cards(props) {
     <FoodPopup 
     trigger={popup} 
     setTrigger={setPopupTrigger}
-   
+    key_id={props.key_id}
+    price={props.price}
+    title={props.title}
+    img_url={props.img}
     size1={props.size[0].items[0].size} 
     size2={props.size[0].items[1].size} 
     size3={props.size[0].items[2].size} 
+    isRadio={props.size[0].isRadio} 
     
     t1={props.toppings[0].items[0].name} 
     t2={props.toppings[0].items[1].name} 

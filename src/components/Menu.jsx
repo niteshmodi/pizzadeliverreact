@@ -16,9 +16,10 @@ function Menu() {
   let filterData = data;
   
   const [selected, setSelected] = useState("");
-
+  
   const [added,setAdded] = useState(0);
   const [vegfilter,setVegFilter] = useState(false);
+  const [isfilter,setisfilter] = useState(true);
   
   function addItem(id){
   setAdded(id);
@@ -66,27 +67,36 @@ const getApiData= async () => {
 const sortData = () => {
   if(selected==="" || selected==="reset" ){
     setData(arrayData)
-    loadData();
+    // loadData();
   }
   else if (selected==="PLTH")
   {
-      const filterr =filterData.sort((a,b) => Number(a.price)-Number(b.price));
-  setData(filterr);
+      const filterr =filterData.sort((a,b) => parseFloat(a.price)-parseFloat(b.price));
+      console.log("filterData",filterData);
+      setData(filterr);
+      // loadData();
+      setisfilter(false);
   
   }
   else if (selected==="PHTL"){
-    let filterr =filterData.sort((a,b) => Number(b.price)-Number(a.price));
+    let filterr =filterData.sort((a,b) => parseFloat(b.price)-parseFloat(a.price));
     setData(filterr)
+    // loadData();
+    setisfilter(false);
    
   }
   else if (selected==="RLTH"){
     let filterr =filterData.sort((a,b) => parseFloat(a.rating)-parseFloat(b.rating));
     setData(filterr);
+    // loadData();
+    setisfilter(false);
    
   }
   else if (selected==="RHTL"){
     let filterr =filterData.sort((a,b) => parseFloat(b.rating)-parseFloat(a.rating));
-    setData(filterr)
+    setData(filterr);
+    // loadData();
+    setisfilter(false);
     
   }
 }
@@ -124,7 +134,7 @@ getApiData();
 
 useEffect( () => {
 sortData();
-})
+},[selected])
 
 const loadData = (is) =>{
   cardItems = [];
@@ -132,7 +142,7 @@ const loadData = (is) =>{
     const item = (
       <Cards
         key={index}
-        id={index}
+        key_id={FoodItem.id}
         title={FoodItem.name}
         des={FoodItem.description}
         price={FoodItem.price}
@@ -146,8 +156,9 @@ const loadData = (is) =>{
     cardItems.push(item);
 });
 }
-
-loadData();
+// if(isfilter){
+  loadData();
+// }
 
 console.log('cardItems',cardItems);
 
